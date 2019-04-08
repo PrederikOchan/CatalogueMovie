@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Catalogue Movie</string>
+    <string name="search">Cari</string>
+    <string name="search_hint">Masukan Judul...</string>
+    <string name="upcoming_tab">Akan Tayang</string>
+    <string name="now_playing_tab">Sedang Tayang</string>
+    <string name="favourite_tab">Favorit</string>
+    <string name="detail">Detil</string>
+    <string name="label_detail_activity">Detil Film</string>
+
+    <string name="title">Judul</string>
+    <string name="release_date">Tanggal Rilis</string>
+    <string name="overview">Ikhtisar</string>
+
+    <string name="settings">Pengaturan</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="roshan_din_firozi">Roshan Din FIrozi</string>
+    <string name="roze_d_frozzy_gmail_com">roze.d.frozzy@gmail.com</string>
+
+    <string name="key_setting_locale">setting_locale</string>
+    <string name="key_setting_locale_summary">Ganti Locale Ponsel</string>
+    <string name="key_setting_locale_title">Bahasa</string>
+
+    <string name="remove_favourite">Dihapus dari favorit</string>
+    <string name="save_favourite">Disimpan sebagai favorit</string>
+    <string name="appwidget_text">Film Favorit</string>
+    <string name="add_widget">Add widget</string>
+    <string name="empty_text">Anda belum mempunyai film favorit</string>
+</resources>

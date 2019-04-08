@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_item_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/img_home_item_poster"
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/item_home_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_home_item_poster"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="8dp"
+            android:ellipsize="end"
+            tools:text="title"/>
+
+        <TextView
+            android:id="@+id/item_home_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_home_item_poster"
+            android:layout_below="@id/item_home_title"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="overview"/>
+
+        <TextView
+            android:id="@+id/item_home_release_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_home_item_poster"
+            android:layout_below="@id/item_home_overview"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"
+            android:maxLines="2"
+            tools:text="release date"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/img_home_item_poster"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/detail"
+                android:textSize="11sp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_weight="1"/>
+
+            <!--<Button
+                android:id="@+id/btn_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/share"
+                android:textSize="11sp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_weight="1"/>-->
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

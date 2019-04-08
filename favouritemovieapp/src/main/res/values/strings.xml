@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FavouriteMovieApp</string>
+    <string name="detail">Detail</string>
+    <string name="label_detail_activity">Detail Movie</string>
+
+    <string name="title">Title</string>
+    <string name="release_date">Release Date</string>
+    <string name="overview">Overview</string>
+</resources>

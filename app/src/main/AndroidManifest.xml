@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rozedfrozzy.cataloguemovie">
+
+    <permission
+        android:name="com.rozedfrozzy.cataloguemovie.READ_DATABASE"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.rozedfrozzy.cataloguemovie.WRITE_DATABASE"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".views.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".views.SearchActivity" />
+        <activity
+            android:name=".views.DetailMovieActivity"
+            android:label="@string/label_detail_activity" />
+        <activity
+            android:name=".views.settings.SettingActivity"
+            android:label="@string/settings" />
+
+        <provider
+            android:name=".db.FavouriteProvider"
+            android:authorities="com.rozedfrozzy.cataloguemovie"
+            android:exported="true"
+            android:readPermission="com.rozedfrozzy.cataloguemovie.READ_DATABASE"
+            android:writePermission="com.rozedfrozzy.cataloguemovie.WRITE_DATABASE" />
+
+        <receiver android:name=".widget.StackWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/stack_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".widget.StackWidgetService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <receiver
+            android:name=".scheduler.DailyReminderReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".scheduler.ReleaseReminderReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+    </application>
+
+</manifest>
